@@ -9,6 +9,11 @@ loadingDiv.textContent = "Loading images...";
 document.body.appendChild(loadingDiv);
 loadingDiv.style.display = "none";
 
+const button = document.createElement("button");
+button.id = "download-images-button";
+button.textContent = "Download Images";
+document.body.appendChild(button);
+
 const imageUrls = [
   "https://picsum.photos/id/237/200/300",
   "https://picsum.photos/id/238/200/300",
@@ -43,4 +48,4 @@ function downloadImages() {
     });
 }
 
-downloadImages();
+button.addEventListener("click", downloadImages);
